@@ -1,0 +1,47 @@
+# Normalise line endings for text files
+* text=auto
+
+# Source and documentation
+*.md   text
+*.csv  text
+*.json text
+*.yml  text
+*.yaml text
+*.py   text eol=lf
+*.sh   text eol=lf
+*.svg  text
+*.bib  text
+*.cff  text
+
+# SolidWorks native files (binary)
+*.SLDPRT binary
+*.SLDASM binary
+*.SLDDRW binary
+*.sldprt binary
+*.sldasm binary
+*.slddrw binary
+
+# Neutral CAD and mesh files (can be very large; avoid noisy diffs)
+*.STEP -diff
+*.STP  -diff
+*.step -diff
+*.stp  -diff
+*.STL  binary
+*.stl  binary
+*.3MF  binary
+*.3mf  binary
+
+# Documents, images and media
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.mp4  binary
+*.mov  binary
+
+# Optional: enable Git LFS ONLY if repository size becomes a problem (decide later)
+# *.SLDPRT filter=lfs diff=lfs merge=lfs -text
+# *.SLDASM filter=lfs diff=lfs merge=lfs -text
+# *.SLDDRW filter=lfs diff=lfs merge=lfs -text
+# *.mp4    filter=lfs diff=lfs merge=lfs -text

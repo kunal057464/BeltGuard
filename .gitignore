@@ -1,0 +1,43 @@
+# Generic rules only. Language- or toolchain-specific rules are added when those choices are made.
+
+# ---- Operating system ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Editors / IDEs ----
+.idea/
+.vscode/
+*.swp
+*~
+
+# ---- Secrets and local configuration (NEVER commit) ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials*.json
+*.secret
+
+# ---- Build output ----
+build/
+dist/
+out/
+
+# ---- SolidWorks lock / temporary files ----
+# (native .SLDPRT / .SLDASM / .SLDDRW files ARE tracked)
+~$*
+*.tmp
+*.bak
+
+# ---- Logs ----
+# Measurement and test logs under data/, tests/, validation/ and results/ are evidence and ARE tracked.
+*.log
+!data/**/*.log
+!tests/**/*.log
+!validation/**/*.log
+!results/**/*.log
